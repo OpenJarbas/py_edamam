@@ -8,7 +8,7 @@ e = Edaman(nutrition_appid='5a32xxx',
            recipes_appid='ecxxxb',
            recipes_appkey='83347a87xxxde8106646',
            food_appid='ecxxxb',
-           food_appkey'83347a87xxxde8106646')
+           food_appkey='83347a87xxxde8106646')
 
 print e.search_nutrient("1 large apple")
 print e.search_recipe("onion and chicken")
