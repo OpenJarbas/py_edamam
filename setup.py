@@ -14,7 +14,7 @@ def required(requirements_file):
 
 setup(
     name='py_edamam',
-    version='0.1.6',
+    version='0.2',
     packages=['py_edamam'],
     url='https://github.com/JarbasAl/py_edamam',
     license='MIT',
