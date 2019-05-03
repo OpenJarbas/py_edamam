@@ -4,11 +4,13 @@ import json
 
 class Edaman(object):
     def __init__(self, nutrition_appid=None, nutrition_appkey=None,
-                 recipes_appid=None, recipes_appkey=None):
+                 recipes_appid=None, recipes_appkey=None, food_appid=None, food_appkey=None):
         self.nutrition_appid = nutrition_appid
         self.nutrition_appkey = nutrition_appkey
         self.recipes_appid = recipes_appid
         self.recipes_appkey = recipes_appkey
+        self.food_appid = food_appid
+        self.food_appkey = food_appkey
 
     def search_recipe(self, query="chicken"):
         url = 'https://api.edamam.com/search?q=' + query + '&app_id=' + \
@@ -56,8 +58,8 @@ class Edaman(object):
     def search_food(self, query="pizza"):
         query = query.replace(" ", "%20")
         url = 'https://api.edamam.com/api/food-database/parser?ingr=' + \
-            query + '&app_id=' + self.nutrition_appid + '&app_key=' + \
-            self.nutrition_appkey + '&page=0'
+            query + '&app_id=' + self.food_appid + '&app_key=' + \
+            self.food_appkey + '&page=0'
         r = requests.get(url)
         return r.json()["parsed"][0]
 
