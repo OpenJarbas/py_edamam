@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from py_edamam import Edaman
+from py_edamam import Edamam
 
-e = Edaman(recipes_appid='ecxxxb',
+e = Edamam(recipes_appid='ecxxxb',
            recipes_appkey='83347a87xxxde8106646')
 
 

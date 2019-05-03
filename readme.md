@@ -9,9 +9,9 @@ python api for https://developer.edamam.com
 
 ## usage
 ```python
-from py_edamam import Edaman
+from py_edamam import Edamam
 
-e = Edaman(nutrition_appid='5a32xxx',
+e = Edamam(nutrition_appid='5a32xxx',
            nutrition_appkey='cabexxx',
            recipes_appid='ecxxxb',
            recipes_appkey='83347a87xxxde8106646',
@@ -25,7 +25,7 @@ print(e.search_food("coke"))
 
 ## Credits
 
-[Edaman](https://www.edamam.com/)
+[Edamam](https://www.edamam.com/)
 
 [JarbasAI](https://jarbasal.github.io)
 

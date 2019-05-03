@@ -8,7 +8,7 @@ from py_edamam.exceptions import APIError, InvalidFoodApiKey, \
 logger = logging.getLogger("PyEdaman")
 
 
-class Edaman(object):
+class Edamam(object):
     def __init__(self,
                  # keys scrapped from web demos
                  nutrition_appid="47379841",
