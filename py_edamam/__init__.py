@@ -161,7 +161,8 @@ class Ingredient:
                  totalDaily=None,
                  totalWeight=0,
                  calories=0,
-                 totalNutrients=None):
+                 totalNutrients=None,
+                 totalNutrientsKCal=None):
         self.name = name
         self.dietLabels = dietLabels or []
         self.healthLabels = healthLabels or []
@@ -175,6 +176,12 @@ class Ingredient:
         else:
             self.totalDaily = totalDaily or []
         self.totalWeight = totalWeight
+        self.totalNutrientsKCal = []
+        if isinstance(totalNutrientsKCal, dict):
+            for n in totalNutrientsKCal:
+                self.totalNutrientsKCal += [Nutrient(n, **totalNutrientsKCal[n])]
+        else:
+            self.totalNutrientsKCal = totalNutrientsKCal or []
         self.calories = calories
         self.totalNutrients = []
         if isinstance(totalNutrients, dict):
@@ -239,9 +246,15 @@ class Recipe:
                  ingredients=None,
                  source="edamam",
                  ingredient_names=None,
-                 edamam=None):
+                 edamam=None,
+                 cuisineType=None,
+                 mealType=None,
+                 dishType=None):
         self.ingredient_names = ingredient_names or []
         self.ingredient_quantities = ingredients or []
+        self.cuisineType = cuisineType or []
+        self.mealType = mealType or []
+        self.dishType = dishType or []
         self.label = label
         self.dietLabels = dietLabels or []
         self.healthLabels = healthLabels or []
